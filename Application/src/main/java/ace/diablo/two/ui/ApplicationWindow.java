@@ -59,7 +59,7 @@ public class ApplicationWindow {
     }
 
     private void createFrame() {
-        frame = new JFrame("ACE:Diablo1");
+        frame = new JFrame("ACE:Diablo2");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 500);
 
