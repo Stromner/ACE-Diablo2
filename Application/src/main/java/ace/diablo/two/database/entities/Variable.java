@@ -7,30 +7,24 @@ public class Variable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private Long id;
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private VariableType variableType;
     @Column(nullable = false, length = 255)
     private String name;
+    @Column(nullable = false)
+    private boolean isDynamic;
+    @Column(nullable = false)
+    private int byteSize;
 
     protected Variable() {
     }
 
-    public Variable(String name, VariableType variableType) {
+    public Variable(String name, boolean isDynamic, int byteSize) {
         this.name = name;
-        this.variableType = variableType;
+        this.isDynamic = isDynamic;
+        this.byteSize = byteSize;
     }
 
     public Long getId() {
         return id;
-    }
-
-    public VariableType getVariableType() {
-        return variableType;
-    }
-
-    public void setVariableType(VariableType variableType) {
-        this.variableType = variableType;
     }
 
     public String getName() {
@@ -41,12 +35,34 @@ public class Variable {
         this.name = name;
     }
 
+    public boolean isDynamic() {
+        return isDynamic;
+    }
+
+    public void setDynamic(boolean dynamic) {
+        isDynamic = dynamic;
+    }
+
+    public int getByteSize() {
+        return byteSize;
+    }
+
+    public void setByteSize(int byteSize) {
+        this.byteSize = byteSize;
+    }
+
     @Override
     public String toString() {
         return "Variable{" +
                 "id=" + id +
-                ", variableType=" + variableType +
                 ", name='" + name + '\'' +
+                ", isDynamic=" + isDynamic +
+                ", byteSize=" + byteSize +
                 '}';
+    }
+
+    @Override
+    public Variable clone() {
+        return new Variable(name, isDynamic, byteSize);
     }
 }
