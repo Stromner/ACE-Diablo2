@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 @Entity
 public class CustomSizeContent extends DataContent<byte[]> {
-    @Column(name = "streamDataContent", nullable = false, length = 255)
+    @Column(name = "customDataContent", nullable = false, length = 512)
     private byte[] dataContent;
 
     protected CustomSizeContent() {

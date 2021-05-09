@@ -65,6 +65,20 @@ public class VariablesGlossary {
         glossaryList.add(new Variable("mercClass", false, 2));
         glossaryList.add(new Variable("mercExp", false, 4));
         glossaryList.add(new Variable("hardCoded7", false, 144)); // TODO Find what this block actually represents
-        //
+        // Quests TODO MAP
+        glossaryList.add(new Variable("quests", false, 298));
+        // Waypoints TODO MAP
+        glossaryList.add(new Variable("waypoints", false, 81));
+        // NPCs TODO MAP
+        glossaryList.add(new Variable("npcs", false, 51));
+        // Stats
+        glossaryList.add(new Variable("gf", false, 4));
+        glossaryList.add(new Variable("statPresent", false, 2));
+        glossaryList.add(new Variable("strength", false, 8));
+        glossaryList.add(new Variable("energy", false, 8));
+        glossaryList.add(new Variable("dexterity", false, 8));
+        glossaryList.add(new Variable("vitality", false, 8));
+        glossaryList.add(new Variable("freeStats", true, 8));
+        glossaryList.add(new Variable("freeSkills", true, 8));
     }
 }
